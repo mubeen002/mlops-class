@@ -1,1 +1,16 @@
-
+name: MLOps Python Tests
+on: push
+  
+jobs:
+  unit-testing:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: checkout code
+      uses: actions/checkout@v2
+      
+    - name: install packages
+      run: pip install pytest
+      
+    - name: tun tests
+      run: pytest test.py
