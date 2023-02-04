@@ -1,4 +1,4 @@
-from walllet import Wallet
+from wallet import Wallet
 
 def test_getAmount():
   obj = Wallet()
